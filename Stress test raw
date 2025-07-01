@@ -8,9 +8,9 @@ WScript.Sleep 1250
 WshShell.Run "magnify.exe", 1, False
 
 ' Verhoog volume 100 keer
-For i = 1 To 100
+For i = 1 To 60
     WshShell.SendKeys Chr(175)
-    WScript.Sleep 400
+    WScript.Sleep 150
 Next
 
 ' Start verteller
