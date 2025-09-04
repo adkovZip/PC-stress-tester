@@ -17,7 +17,6 @@ WshShell.Run "magnify.exe", 1, False
 For i = 1 To 60
     WshShell.SendKeys Chr(175)
     WScript.Sleep 150
-Next
 
 ' Start verteller
 WshShell.Run "narrator", 0, False
